@@ -10,6 +10,15 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  parameters: {
+    backgrounds: {
+      values: [
+        { name: 'red', value: '#f00' },
+        { name: 'green', value: '#0f0' },
+        { name: 'blue', value: '#00f' },
+      ],
+    }
+  }
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
