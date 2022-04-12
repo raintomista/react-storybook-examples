@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { screen, userEvent } from '@storybook/testing-library';
 import { Button } from './Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -38,8 +38,10 @@ Primary.args = {
   label: 'Button',
 };
 
-Primary.parameters = {
-
+Primary.play = () => {
+  const button = screen.getByRole('button');
+  userEvent.click(button);
+  userEvent.click(button);
 };
 
 export const Secondary = Template.bind({});
