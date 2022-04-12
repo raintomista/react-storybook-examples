@@ -10,6 +10,13 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ padding: '3em' }}>
+        <Story/>
+      </div>
+    )
+  ],
   parameters: {
     backgrounds: {
       values: [
@@ -29,6 +36,10 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: 'Button',
+};
+
+Primary.parameters = {
+
 };
 
 export const Secondary = Template.bind({});
