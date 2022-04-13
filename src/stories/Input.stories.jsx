@@ -6,6 +6,25 @@ import { Input } from "./Input";
 export default {
   title: "Example/Input",
   component: Input,
+  argTypes: {
+    label: {
+      description: "Something",
+      type: {
+        name: "string",
+        required: true,
+      },
+      table: {
+        category: "Color",
+        subcategory: "Button color",
+        type: { summary: "string", detail: "stringify" },
+        defaultValue: { summary: "Hello", detail: "hehe" },
+      },
+    },
+    date: {
+      name: "date",
+      control: null,
+    },
+  },
 };
 
 const Template = (args) => <Input {...args} />;
