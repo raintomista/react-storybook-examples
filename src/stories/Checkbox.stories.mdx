@@ -1,4 +1,5 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 import { Checkbox } from "./Checkbox";
 
@@ -40,3 +41,17 @@ Markdown documentation.
     {Template.bind({})}
   </Story>
 </Canvas>
+
+```scss
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+```
+
+export const Component = () => {
+  return <SyntaxHighlighter />;
+};
