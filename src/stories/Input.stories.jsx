@@ -30,6 +30,10 @@ export default {
       description: {
         component: "Some component _markdown_",
       },
+      source: {
+        format: true,
+        type: "dynamic",
+      },
     },
   },
 };
