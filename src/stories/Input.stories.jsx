@@ -25,11 +25,19 @@ export default {
       control: null,
     },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: "Some component _markdown_",
+      },
+    },
+  },
 };
 
 const Template = (args) => <Input {...args} />;
 
 export const BaseInput = Template.bind({});
+
 BaseInput.args = {
   placeholder: "Enter text",
   value: "",
@@ -41,4 +49,14 @@ BaseInput.play = async ({ canvasElement }) => {
   await userEvent.type(input, "random string", {
     delay: 100,
   });
+};
+
+export const SecondaryInput = Template.bind({});
+
+SecondaryInput.parameters = {
+  docs: {
+    description: {
+      story: "Some story **markdown**",
+    },
+  },
 };
