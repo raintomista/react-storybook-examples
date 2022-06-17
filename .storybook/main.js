@@ -11,4 +11,11 @@ module.exports = {
   core: {
     builder: "@storybook/builder-webpack5",
   },
+  refs: {
+    "design-system": {
+      title: "Storybook Design System",
+      url: "https://5ccbc373887ca40020446347-yldsqjoxzb.chromatic.com",
+      expanded: false, // optional, true by default
+    },
+  },
 };

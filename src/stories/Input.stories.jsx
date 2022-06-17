@@ -55,6 +55,25 @@ BaseInput.play = async ({ canvasElement }) => {
   });
 };
 
+BaseInput.parameters = {
+  controls: {
+    exclude: ["value"],
+  },
+  viewport: {
+    defaultViewport: "kindleFireHD",
+  },
+  backgrounds: {
+    default: "facebook",
+    grid: {
+      cellSize: 100,
+      opacity: 0.5,
+      cellAmount: 5,
+      offsetX: 16, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+      offsetY: 16, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+    },
+  },
+};
+
 export const SecondaryInput = Template.bind({});
 
 SecondaryInput.parameters = {
